@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PrintActivity">
+
+    <Button
+        android:id="@+id/btnPrintExistPDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打印存在的pdf">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnCreatePrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建PDF并打印">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnPrintForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填充并打印表格">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnCreateForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建表格模板">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnPrintImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="视图生成PDf">
+
+    </Button>
+
+
+</LinearLayout>

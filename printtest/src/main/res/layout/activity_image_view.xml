@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <!--使用表格布局，每个单元格设定底色，然后在上面在布局，覆盖底色，完成单元格边框的样式-->
+    <RelativeLayout
+        android:id="@+id/rlImgRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnPrintView"
+        android:background="@android:color/background_light">
+
+        <TableLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+
+            <!--第一行  在TableRow里面设置底色，然后在上面覆盖一层需要的图形或者文字，露出来的地方成为边框
+            设置的底色为边框色-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+
+                <!--第一行第一列       使用layout_weight 属性来规定是否是均分，我这儿使用均分，所有每一列都为1-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--第一行第一列用于布局  RelativeLayout 使用相对布局嵌套在LinearLayout布局中，
+                    可以将文字和图片布局在一起
+                    这样可以做成一个文字可图片混合的按钮，这里只用来做单元格效果
+                    设置背景色，这里的背景色将覆盖表格的背景色，根据你需要的空间，留出空间大小，留出的部分成为单元格边框-->
+                    <RelativeLayout
+                        android:id="@+id/Re_butt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/background_light">
+
+                        <!--第一行第一列 图片-->
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/ic_launcher_round"/>
+
+                        <!--第一行 第一列 文字-->
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView1"
+                            android:layout_centerHorizontal="true"
+                            android:text="这是文字"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--一下内容的布局和上面的布局是一样的-->
+
+                <!--第一行 第二列-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--第一行 第二列 布局-->
+                    <RelativeLayout
+                        android:id="@+id/Re_butt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/background_light">
+                        <!--第一行 第二列 图片-->
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/ic_launcher_round"/>
+
+                        <!--第一行 第二列 文字-->
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView2"
+                            android:layout_centerHorizontal="true"
+                            android:text="这是文字"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--第一行 第三列-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--第一行 第三列 布局-->
+                    <RelativeLayout
+                        android:id="@+id/Re_butt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/background_light">
+                        <!--第一行 第三列 图片-->
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/ic_launcher_round"/>
+                        <!--第一行 第三列 文字-->
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView3"
+                            android:layout_centerHorizontal="true"
+                            android:text="这是文字"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+
+                <!--第二行第一列-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--第2行第一列用于布局-->
+                    <RelativeLayout
+                        android:id="@+id/Re_butt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/background_light">
+
+                        <!--第2行第一列 图片-->
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/ic_launcher_round"/>
+
+                        <!--第2行 第一列 文字-->
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView4"
+                            android:layout_centerHorizontal="true"
+                            android:text="这是文字"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--第2行 第二列-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--第2行 第二列 布局-->
+                    <RelativeLayout
+                        android:id="@+id/Re_butt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/background_light">
+                        <!--第2行 第二列 图片-->
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/ic_launcher_round"/>
+
+                        <!--第二行 第二列 文字-->
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView5"
+                            android:layout_centerHorizontal="true"
+                            android:text="这是文字"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--第2行 第三列-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--第一行 第三列 布局-->
+                    <RelativeLayout
+                        android:id="@+id/Re_butt6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/background_light">
+                        <!--第一行 第三列 图片-->
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/ic_launcher_round"/>
+                        <!--第一行 第三列 文字-->
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView6"
+                            android:layout_centerHorizontal="true"
+                            android:text="这是文字"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <ImageView
+            android:layout_width="600px"
+            android:layout_height="338px"
+            android:layout_below="@id/tab"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/test"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPrintView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20px"
+        android:text="打印一页"/>
+
+    <Button
+        android:id="@+id/btnPrintView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20px"
+        android:layout_toRightOf="@id/btnPrintView"
+        android:text="打印三页"/>
+
+</RelativeLayout>
